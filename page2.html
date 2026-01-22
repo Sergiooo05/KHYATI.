@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TULIPS</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* -------- TEXT AREA -------- */
+  .text-area {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 3s ease forwards;
+  }
+
+  .text-area div {
+    max-width: 500px;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+  }
+
+  /* -------- FIELD -------- */
+  .field {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    padding-bottom: 14px;
+    background: linear-gradient(to top, #0b0b0b, #161616);
+  }
+
+  .tulip {
+    width: 60px;
+    transform-origin: bottom center;
+    animation: sway 8s ease-in-out infinite;
+  }
+
+  .t1 { animation-duration: 7.6s; }
+  .t2 { animation-duration: 8.8s; }
+  .t3 { animation-duration: 7.1s; }
+  .t4 { animation-duration: 8.3s; }
+  .t5 { animation-duration: 9.1s; }
+
+  @keyframes sway {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(4deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 600px) {
+  .text-area div {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .tulip {
+    width: 48px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- TEXT -->
+  <div class="text-area">
+    <div>
+      Some days feel heavier than they should.<br><br>
+      Itni samjhdar ladki baat baat pe rote hue acchi lagti h kya??<br>
+      Rone se sirf khudka nuksaan hota h<br>
+      Samne wale ko sayad fark bhi na padhe tumhare aasu se! <br><br>
+      Tumhare liye bhout sare tuples —<br>
+       (phool for fool😝)
+    </div>
+  </div>
+
+  <!-- TULIP FIELD -->
+  <div class="field">
+
+    <!-- TULIP SVG -->
+    <svg class="tulip t1" viewBox="0 0 100 200">
+      <path d="M50 120 C20 90, 20 50, 50 40 C80 50, 80 90, 50 120 Z" fill="#f4acb7"/>
+      <path d="M50 120 L50 200" stroke="#4f772d" stroke-width="6"/>
+    </svg>
+
+    <svg class="tulip t2" viewBox="0 0 100 200">
+      <path d="M50 120 C25 95, 25 55, 50 45 C75 55, 75 95, 50 120 Z" fill="#ffd6a5"/>
+      <path d="M50 120 L50 200" stroke="#4f772d" stroke-width="6"/>
+    </svg>
+
+    <svg class="tulip t3" viewBox="0 0 100 200">
+      <path d="M50 120 C22 92, 22 52, 50 42 C78 52, 78 92, 50 120 Z" fill="#cdb4db"/>
+      <path d="M50 120 L50 200" stroke="#4f772d" stroke-width="6"/>
+    </svg>
+
+    <svg class="tulip t4" viewBox="0 0 100 200">
+      <path d="M50 120 C28 98, 28 58, 50 48 C72 58, 72 98, 50 120 Z" fill="#bde0fe"/>
+      <path d="M50 120 L50 200" stroke="#4f772d" stroke-width="6"/>
+    </svg>
+
+    <svg class="tulip t5" viewBox="0 0 100 200">
+      <path d="M50 120 C24 94, 24 54, 50 44 C76 54, 76 94, 50 120 Z" fill="#ffc8dd"/>
+      <path d="M50 120 L50 200" stroke="#4f772d" stroke-width="6"/>
+    </svg>
+
+  </div>
+
+</body>
+</html>
